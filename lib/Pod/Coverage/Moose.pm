@@ -50,6 +50,18 @@ has package => (
     required    => 1,
 );
 
+=head2 cover_requires
+
+Boolean flag to indicate that C<requires $method> declarations in a Role should be trusted.
+
+=cut
+
+has cover_requires => (
+    is          => 'ro',
+    isa         => 'Bool',
+    default => 0,
+);
+
 #
 #   original pod_coverage object
 #
@@ -91,6 +103,7 @@ sub BUILD {
         map {                                               # iterate over all roles of the class
             my $role = $_;
             $role->get_method_list,
+            ($self->cover_requires ? ($role->get_required_method_list) : ()),
             map {                                           # iterate over attributes
                 my $attr = $role->get_attribute($_);
                 ($attr->{is} && $attr->{is} eq any(qw( rw ro wo )) ? $_ : ()),  # accessors
