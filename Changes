@@ -1,0 +1,9 @@
+
+0.02    Thu May 14 2009
+        - Minor POD corrections
+        - Added MooseX-AttributeHelpers hack for injected methods
+        - Fixes to work with the latest versions of Moose (Dave
+          Rolsky)
+
+0.01    Tue Aug 14 20:17:50 CEST 2007
+        - Initial Release

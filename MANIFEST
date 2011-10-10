@@ -1,0 +1,27 @@
+Changes
+inc/Module/AutoInstall.pm
+inc/Module/Install.pm
+inc/Module/Install/AutoInstall.pm
+inc/Module/Install/Base.pm
+inc/Module/Install/Can.pm
+inc/Module/Install/Fetch.pm
+inc/Module/Install/Include.pm
+inc/Module/Install/Makefile.pm
+inc/Module/Install/Metadata.pm
+inc/Module/Install/Win32.pm
+inc/Module/Install/WriteAll.pm
+lib/Pod/Coverage/Moose.pm
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+README
+t/00_use.t
+t/10_basic.t
+t/30_compat_attribute-helpers.t
+t/lib/IsMoose.pm
+t/lib/MooseRole.pm
+t/lib/TestAttributeHelpers.pm
+t/lib/TestAttributeHelpers_Consumer.pm
+t_author/01_pod.t
+t_author/02_pod-coverage.t
+t_author/03_kwalitee.t
