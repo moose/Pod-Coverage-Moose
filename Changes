@@ -1,4 +1,7 @@
 
+0.03    Wed Feb 29 2012
+        - cover_requires option
+
 0.02    Thu May 14 2009
         - Minor POD corrections
         - Added MooseX-AttributeHelpers hack for injected methods
