@@ -14,7 +14,7 @@ use Class::MOP;
 
 use namespace::clean -except => 'meta';
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 =head1 SYNOPSIS
 
