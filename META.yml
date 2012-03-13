@@ -1,7 +1,7 @@
 ---
 abstract: 'L<Pod::Coverage> extension for L<Moose>'
 author:
-  - 'Robert ''phaylon' Sedlacek <rs@474.at>'
+  - "Robert 'phaylon' Sedlacek <rs@474.at>"
 build_requires:
   FindBin: 0
   Test::More: 0
