@@ -99,7 +99,7 @@ sub BUILD {
         $meta->get_all_methods
             unless $meta->isa('Moose::Meta::Role');
     push @trustme, 
-        map { qr/^$_$/ }                                    # turn value into a regex
+        map { qr/^\Q$_\E$/ }                                # turn value into a regex
         map {                                               # iterate over all roles of the class
             my $role = $_;
             $role->get_method_list,
