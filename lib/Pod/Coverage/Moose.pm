@@ -9,7 +9,6 @@ use Moose;
 
 use Pod::Coverage;
 use Carp            qw( croak );
-use Perl6::Junction qw( any );
 use Class::MOP;
 
 use namespace::clean -except => 'meta';
@@ -85,6 +84,7 @@ to find all methods and attribute methods imported via roles.
 
 =cut
 
+my %is = map { $_ => 1 } qw( rw ro wo );
 sub BUILD {
     my ($self, $args) = @_;
 
@@ -106,7 +106,7 @@ sub BUILD {
             ($self->cover_requires ? ($role->get_required_method_list) : ()),
             map {                                           # iterate over attributes
                 my $attr = $role->get_attribute($_);
-                ($attr->{is} && $attr->{is} eq any(qw( rw ro wo )) ? $_ : ()),  # accessors
+                ($attr->{is} && $is{$attr->{is}} ? $_ : ()),  # accessors
                 grep defined, map { $attr->{ $_ } }                             # other attribute methods
                     qw( clearer predicate reader writer accessor );
             } $role->get_attribute_list,
