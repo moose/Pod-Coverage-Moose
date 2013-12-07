@@ -9,7 +9,7 @@ use Moose;
 
 use Pod::Coverage;
 use Carp            qw( croak );
-use Class::MOP;
+use Class::Load qw( load_class );
 
 use namespace::clean -except => 'meta';
 
@@ -156,7 +156,7 @@ around new => sub {
     my $class = $args{package}
         or croak 'You need to specify a package in the constructor arguments';
 
-    Class::MOP::load_class($class);
+    load_class($class);
     return Pod::Coverage->new(%args) unless $class->can('meta');
 
     return $self->$next(@args);
