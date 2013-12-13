@@ -1,4 +1,5 @@
 package Pod::Coverage::Moose;
+# ABSTRACT: Pod::Coverage extension for Moose
 use Moose;
 
 use Pod::Coverage;
