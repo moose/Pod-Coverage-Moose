@@ -3,7 +3,7 @@ use strict;
 
 use FindBin;
 use lib "$FindBin::Bin/lib";
-use Test::More 'no_plan';
+use Test::More;
 
 use_ok  'TestCoverRequires_Consumer',    'consumer test class loaded ok';
 use_ok  'Pod::Coverage::Moose',             'pcm loaded ok';
@@ -15,3 +15,4 @@ isa_ok $pcm, 'Pod::Coverage::Moose',
 is_deeply [sort $pcm->covered], [qw( bar foo )], 'methods from role are covered';
 is_deeply [sort $pcm->uncovered], [qw( baz )], 'new method is not covered';
 
+done_testing;
