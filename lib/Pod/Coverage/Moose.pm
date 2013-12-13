@@ -1,5 +1,3 @@
-=cut
-
 package Pod::Coverage::Moose;
 use Moose;
 
