@@ -1,6 +1,5 @@
-=cut
-
 package Pod::Coverage::Moose;
+# ABSTRACT: Pod::Coverage extension for Moose
 use Moose;
 
 use Pod::Coverage;
@@ -74,6 +73,8 @@ L<Moose> meta object.
 
 =head2 BUILD
 
+=for stopwords initialises
+
 Initialises the internal L<Pod::Coverage> object. It uses the meta object
 to find all methods and attribute methods imported via roles.
 
@@ -93,7 +94,7 @@ sub BUILD {
         grep { $_->isa('MooseX::AttributeHelpers::Meta::Method::Provided') }
         $meta->get_all_methods
             unless $meta->isa('Moose::Meta::Role');
-    push @trustme, 
+    push @trustme,
         map { qr/^\Q$_\E$/ }                                # turn value into a regex
         map {                                               # iterate over all roles of the class
             my $role = $_;
@@ -105,7 +106,7 @@ sub BUILD {
                 grep defined, map { $attr->{ $_ } }                             # other attribute methods
                     qw( clearer predicate reader writer accessor );
             } $role->get_attribute_list,
-        } 
+        }
         $meta->calculate_all_roles;
 
     $args->{trustme} = \@trustme;
@@ -136,7 +137,7 @@ sub BUILD {
 =head2 new
 
 The constructor will only return a C<Pod::Coverage::Moose> object if it
-is invoked on a class that C<can> a C<meta> method. Otherwise, a 
+is invoked on a class that C<can> a C<meta> method. Otherwise, a
 traditional L<Pod::Coverage> object will be returned. This is done so you
 don't get in trouble for mixing L<Moose> with non Moose classes in your
 project.
