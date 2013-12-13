@@ -1,9 +1,8 @@
 use warnings;
 use strict;
 
-use FindBin;
-use lib "$FindBin::Bin/lib";
 use Test::More;
+use lib 't/lib';
 
 use_ok('Pod::Coverage::Moose')
     or die "Doesn't make sense to continue without compiling class\n";

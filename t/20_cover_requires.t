@@ -1,9 +1,8 @@
 use warnings;
 use strict;
 
-use FindBin;
-use lib "$FindBin::Bin/lib";
 use Test::More;
+use lib 't/lib';
 
 use_ok  'TestCoverRequires_Consumer',    'consumer test class loaded ok';
 use_ok  'Pod::Coverage::Moose',             'pcm loaded ok';

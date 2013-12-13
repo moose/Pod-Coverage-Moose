@@ -1,9 +1,8 @@
 use warnings;
 use strict;
 
-use FindBin;
-use lib "$FindBin::Bin/lib";
 use Test::More;
+use lib 't/lib/';
 
 eval { require MooseX::AttributeHelpers };
 Test::More->import(skip_all => 'optional tests, MooseX-AttributeHelpers not found')

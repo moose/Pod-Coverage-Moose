@@ -1,8 +1,7 @@
 use warnings;
 use strict;
 
-use FindBin;
-use lib "$FindBin::Bin/lib";
+use lib 't/lib';
 use Test::More;
 
 eval { require MooseX::Role::WithOverloading };
