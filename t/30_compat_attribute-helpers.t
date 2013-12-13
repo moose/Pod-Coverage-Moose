@@ -4,9 +4,7 @@ use strict;
 use Test::More;
 use lib 't/lib/';
 
-eval { require MooseX::AttributeHelpers };
-Test::More->import(skip_all => 'optional tests, MooseX-AttributeHelpers not found')
-    if $@;
+use Test::Requires 'MooseX::AttributeHelpers';
 
 use_ok  'TestAttributeHelpers_Consumer',    'consumer test class loaded ok';
 use_ok  'Pod::Coverage::Moose',             'pcm loaded ok';

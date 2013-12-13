@@ -4,9 +4,7 @@ use strict;
 use lib 't/lib';
 use Test::More;
 
-eval { require MooseX::Role::WithOverloading };
-Test::More->import(skip_all => 'optional tests, MooseX-Role-WithOverloading not found')
-    if $@;
+use Test::Requires 'MooseX::Role::WithOverloading';
 
 use_ok  'TestOverload_Consumer',    'consumer test class loaded ok';
 use_ok  'Pod::Coverage::Moose',             'pcm loaded ok';
