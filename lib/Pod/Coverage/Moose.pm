@@ -1,7 +1,3 @@
-=head1 NAME
-
-Pod::Coverage::Moose - L<Pod::Coverage> extension for L<Moose>
-
 =cut
 
 package Pod::Coverage::Moose;
@@ -13,7 +9,6 @@ use Class::Load qw( load_class );
 
 use namespace::clean -except => 'meta';
 
-our $VERSION = '0.04';
 
 =head1 SYNOPSIS
 
@@ -169,14 +164,5 @@ around new => sub {
 L<Moose>,
 L<Pod::Coverage>,
 L<Test::Pod::Coverage>
-
-=head1 AUTHOR
-
-Robert 'phaylon' Sedlacek E<lt>rs@474.atE<gt>
-
-=head1 COPYRIGHT AND LICENSE
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself. 
 
 =cut
