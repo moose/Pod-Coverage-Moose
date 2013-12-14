@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.05      2013-12-14 17:55:09Z
         - Removed use of Perl6::Junction, which causes warnings with 5.18.0.
         - switch to using namespace::autoclean everywhere
         - canonical repository migrated to the github moose organization
