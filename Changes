@@ -3,6 +3,7 @@ Revision history for {{$dist->name}}
 {{$NEXT}}
         - Removed use of Perl6::Junction, which causes warnings with 5.18.0.
         - switch to using namespace::autoclean everywhere
+        - canonical repository migrated to the github moose organization
 
 0.04    2012-03-13
         - Fix the author field in META.yml
