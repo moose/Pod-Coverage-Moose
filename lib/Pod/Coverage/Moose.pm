@@ -6,7 +6,7 @@ use Pod::Coverage;
 use Carp            qw( croak );
 use Class::Load qw( load_class );
 
-use namespace::clean -except => 'meta';
+use namespace::autoclean;
 
 
 =head1 SYNOPSIS

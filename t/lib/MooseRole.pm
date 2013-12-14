@@ -1,6 +1,6 @@
 package MooseRole;
 use Moose::Role;
-use namespace::clean -except => 'meta';
+use namespace::autoclean;
 
 has attr => (is => 'rw');
 has complex_attr => (

@@ -1,7 +1,7 @@
 package TestCoverRequires;
 
 use Moose::Role;
-use namespace::clean -except => 'meta';
+use namespace::autoclean;
 
 sub foo { }
 

@@ -8,7 +8,7 @@ The baz method
 
 package IsMoose;
 use Moose;
-use namespace::clean -except => 'meta';
+use namespace::autoclean;
 
 with 'MooseRole';
 
