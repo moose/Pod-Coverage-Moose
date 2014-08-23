@@ -116,21 +116,17 @@ sub BUILD {
 
 =head1 DELEGATED METHODS
 
-=head2 Delegated to the traditional L<Pod::Coverage> object are
+Delegated to the traditional L<Pod::Coverage> object are:
 
-=over
+=head2 coverage
 
-=item coverage
+=head2 covered
 
-=item covered
+=head2 naked
 
-=item naked
+=head2 uncovered
 
-=item uncovered
-
-=item why_unrated
-
-=back
+=head2 why_unrated
 
 =head1 EXTENDED METHODS
 
@@ -162,8 +158,9 @@ around new => sub {
 
 =head1 SEE ALSO
 
-L<Moose>,
-L<Pod::Coverage>,
-L<Test::Pod::Coverage>
+=for :list
+* L<Moose>
+* L<Pod::Coverage>,
+* L<Test::Pod::Coverage>
 
 =cut
