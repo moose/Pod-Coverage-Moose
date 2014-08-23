@@ -1,3 +1,6 @@
+/.ackrc
 /.build/
-!.gitignore
-/Pod-Coverage-Moose-*
+!/.gitignore
+/.latest
+/Pod-Coverage-Moose-*/
+/Pod-Coverage-Moose-*.tar.gz
