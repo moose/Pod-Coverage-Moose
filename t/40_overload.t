@@ -4,7 +4,8 @@ use strict;
 use lib 't/lib';
 use Test::More;
 
-use Test::Requires 'MooseX::Role::WithOverloading';
+use if !eval { require Moose; Moose->VERSION('2.1300') },
+    'Test::Requires' => 'MooseX::Role::WithOverloading';
 
 use_ok  'TestOverload_Consumer',    'consumer test class loaded ok';
 use_ok  'Pod::Coverage::Moose',             'pcm loaded ok';
