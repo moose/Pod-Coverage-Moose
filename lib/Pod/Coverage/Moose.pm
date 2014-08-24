@@ -1,5 +1,7 @@
 package Pod::Coverage::Moose;
 # ABSTRACT: Pod::Coverage extension for Moose
+# KEYWORDS: pod coverage verification validity tests documentation completeness moose methods inheritance
+
 use Moose;
 
 use Pod::Coverage;
