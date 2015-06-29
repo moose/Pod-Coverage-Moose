@@ -1,7 +1,7 @@
 package Pod::Coverage::Moose;
 # ABSTRACT: Pod::Coverage extension for Moose
 # KEYWORDS: pod coverage verification validity tests documentation completeness moose methods inheritance
-# vim: set ts=8 sts=4 sw=4 tw=78 et :
+# vim: set ts=8 sts=4 sw=4 tw=115 et :
 
 our $VERSION = '0.06';
 
