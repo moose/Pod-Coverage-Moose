@@ -1,6 +1,7 @@
 package TestOverload;
 use Moose::Role;
-use MooseX::Role::WithOverloading;
+use if !eval { require Moose; Moose->VERSION('2.1300') },
+    'MooseX::Role::WithOverloading';
 
 use overload
     q{""} => sub { },
