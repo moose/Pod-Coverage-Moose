@@ -1,5 +1,7 @@
 Revision history for Pod-Coverage-Moose
 
+{{$NEXT}}
+
 0.07      2015-09-05 04:03:44Z
         - fix test failures on Moose >= 2.1300 when
           MooseX::Role::WithOverloading is not installed (RT#106898)
