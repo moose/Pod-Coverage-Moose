@@ -24,7 +24,7 @@ use namespace::autoclean;
 =head1 DESCRIPTION
 
 When using L<Pod::Coverage> in combination with L<Moose>, it will
-report any method imported from a Role. This is especially bad when
+report any method imported from a L<role|Moose::Role>. This is especially bad when
 used in combination with L<Test::Pod::Coverage>, since it takes away
 its ease of use.
 
