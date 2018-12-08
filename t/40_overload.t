@@ -2,7 +2,7 @@ use warnings;
 use strict;
 
 use lib 't/lib';
-use Test::More;
+use Test::More 0.88;
 
 use if !eval { require Moose; Moose->VERSION('2.1300') },
     'Test::Requires' => 'MooseX::Role::WithOverloading';
