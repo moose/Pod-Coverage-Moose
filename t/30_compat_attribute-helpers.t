@@ -4,7 +4,7 @@ use strict;
 use Test::More 0.88;
 use lib 't/lib/';
 
-use Test::Requires 'MooseX::AttributeHelpers';
+use Test::Needs 'MooseX::AttributeHelpers';
 
 use_ok  'TestAttributeHelpers_Consumer',    'consumer test class loaded ok';
 use_ok  'Pod::Coverage::Moose',             'pcm loaded ok';
