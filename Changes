@@ -1,6 +1,6 @@
 Revision history for Pod-Coverage-Moose
 
-{{$NEXT}}
+0.08      2023-08-25 22:44:37Z
         - fix "Attempt to call undefined import method with arguments" error
           on perl 5.39.1
 
