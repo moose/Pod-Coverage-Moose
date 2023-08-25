@@ -9,13 +9,13 @@ use Pod::Coverage::Moose;
 {   package NonMoose;
     sub foo { }
 }
-isa_ok Pod::Coverage::Moose->new(package => 'NonMoose'), 'Pod::Coverage',
-    'non Moose package coverage object';
+isa_ok(Pod::Coverage::Moose->new(package => 'NonMoose'), 'Pod::Coverage',
+    'non Moose package coverage object');
 
 require IsMoose;
 my $pcm = Pod::Coverage::Moose->new(package => 'IsMoose');
-isa_ok $pcm, 'Pod::Coverage::Moose',
-    'Moose package coverage object';
+isa_ok($pcm, 'Pod::Coverage::Moose',
+    'Moose package coverage object');
 
 #use Data::Dump qw( dump );
 #print dump([$pcm->covered]), "\n";
