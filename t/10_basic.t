@@ -4,8 +4,7 @@ use strict;
 use Test::More 0.88;
 use lib 't/lib';
 
-use_ok('Pod::Coverage::Moose')
-    or die "Doesn't make sense to continue without compiling class\n";
+use Pod::Coverage::Moose;
 
 {   package NonMoose;
     sub foo { }
